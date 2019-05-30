@@ -1,5 +1,5 @@
 {
-  "name": "maximsarandev/lumen-swagger-cors",
+  "name": "maxim-sarandev/lumen-swagger-cors",
   "description": "CORS configuration added to the base Swagger Lumen repo",
   "keywords": ["lumen", "laravel", "swagger", "cors"],
   "license": "MIT",
