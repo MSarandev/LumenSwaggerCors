@@ -1,12 +1,16 @@
 {
-  "name": "darkaonline/swagger-lume",
-  "description": "Swagger integration to Lumen 5",
-  "keywords": ["lumen", "laravel", "swagger"],
+  "name": "maximsarandev/lumen-swagger-cors",
+  "description": "CORS configuration added to the base Swagger Lumen repo",
+  "keywords": ["lumen", "laravel", "swagger", "cors"],
   "license": "MIT",
   "authors": [
     {
       "name": "Darius Matulionis",
       "email": "darius@matulionis.lt"
+    },
+    {
+      "name": "Maxim Sarandev",
+      "email": "maxsarandev@gmail.com"
     }
   ],
   "require": {
