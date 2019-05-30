@@ -3,7 +3,7 @@
   "description": "CORS configuration added to the base Swagger Lumen repo",
   "keywords": ["lumen", "laravel", "swagger", "cors"],
   "license": "MIT",
-  "version": "1",
+  "version": "1.1",
   "authors": [
     {
       "name": "Darius Matulionis",
