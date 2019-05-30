@@ -13,6 +13,8 @@ class SwaggerLumeController extends BaseController
     /**
      * Dump api-docs.json content endpoint.
      *
+     * Includes the CORS data
+     *
      * @param null $jsonFile
      *
      * @return \Illuminate\Http\Response
@@ -28,7 +30,10 @@ class SwaggerLumeController extends BaseController
 
         $content = File::get($filePath);
 
-        return new Response($content, 200, ['Content-Type' => 'application/json']);
+        // Attach the cors headers
+        $corsHeaders = ['Access-Control-Allow-Origin' => config('swagger-lume.cors_data.allowedOrigin') ?? ''];
+
+        return new Response($content, 200, ['Content-Type' => 'application/json', $corsHeaders]);
     }
 
     /**

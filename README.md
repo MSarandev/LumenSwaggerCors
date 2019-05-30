@@ -1,13 +1,17 @@
-[![Total Downloads](https://poser.pugx.org/DarkaOnLine/swagger-lume/downloads.svg)](https://packagist.org/packages/DarkaOnLine/swagger-lume)
-[![Build Status](https://travis-ci.org/DarkaOnLine/SwaggerLume.svg?branch=master)](https://travis-ci.org/DarkaOnLine/SwaggerLume)
-[![Coverage Status](https://coveralls.io/repos/github/DarkaOnLine/SwaggerLume/badge.svg?branch=master)](https://coveralls.io/github/DarkaOnLine/SwaggerLume?branch=master)
-[![Code Climate](https://codeclimate.com/github/DarkaOnLine/SwaggerLume/badges/gpa.svg)](https://codeclimate.com/github/DarkaOnLine/SwaggerLume)
-[![StyleCI](https://styleci.io/repos/50113229/shield)](https://styleci.io/repos/50113229)
-
-SwaggerLume
+Customised "SwaggerLume"
+==========
+Info
 ==========
 
+This package has been cloned for the purposes of defining a set of CORS headers, that
+will be included in the default response object. 
+
+No other logic has been currently edited.
+
+All credit is due to the creator of the original "SwaggerLume" codebase - `thank you`!
+
 Swagger 2.0 for Lumen 5
+=======
 
 This package is a wrapper of [Swagger-php](https://github.com/zircote/swagger-php) and [swagger-ui](https://github.com/swagger-api/swagger-ui) adapted to work with Lumen 5.
 

@@ -201,4 +201,14 @@ return [
     'constants' => [
         // 'SWAGGER_LUME_CONST_HOST' => env('SWAGGER_LUME_CONST_HOST', 'http://my-default-host.com'),
     ],
+
+    /*
+     * |--------------------------
+     * | CORS definition and configuration
+     * |--------------------------
+     */
+    'cors_data' => [
+        // Currently supports a single URL
+        'allowedOrigin' => env('SWAGGER_LUME_CORS_ACCESS_ORIGIN', ''),
+    ]
 ];
