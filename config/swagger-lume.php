@@ -209,6 +209,6 @@ return [
      */
     'cors_data' => [
         // Currently supports a single URL
-        'allowedOrigin' => env('SWAGGER_LUME_CORS_ACCESS_ORIGIN', ''),
+        'allowedOrigin' => env('SWAGGER_LUME_CORS_ACCESS_ORIGIN', null),
     ]
 ];

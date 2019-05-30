@@ -31,9 +31,13 @@ class SwaggerLumeController extends BaseController
         $content = File::get($filePath);
 
         // Attach the cors headers
-        $corsHeaders = ['Access-Control-Allow-Origin' => config('swagger-lume.cors_data.allowedOrigin') ?? ''];
+        if(config('swagger-lume.cors_data.allowedOrigin') !== null){
+            $corsHeaders = ['Access-Control-Allow-Origin' => config('swagger-lume.cors_data.allowedOrigin')];
 
-        return new Response($content, 200, ['Content-Type' => 'application/json', $corsHeaders]);
+            return new Response($content, 200, ['Content-Type' => 'application/json', $corsHeaders]);
+        }
+
+        return new Response($content, 200, ['Content-Type' => 'application/json']);
     }
 
     /**
