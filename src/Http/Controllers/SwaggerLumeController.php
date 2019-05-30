@@ -21,20 +21,21 @@ class SwaggerLumeController extends BaseController
      */
     public function docs($jsonFile = null)
     {
-        $filePath = config('swagger-lume.paths.docs').'/'.
-            (! is_null($jsonFile) ? $jsonFile : config('swagger-lume.paths.docs_json'));
+        $filePath = config('swagger-lume.paths.docs') . '/' .
+            (!is_null($jsonFile) ? $jsonFile : config('swagger-lume.paths.docs_json'));
 
-        if (! File::exists($filePath)) {
-            abort(404, 'Cannot find '.$filePath);
+        if (!File::exists($filePath)) {
+            abort(404, 'Cannot find ' . $filePath);
         }
 
         $content = File::get($filePath);
 
         // Attach the cors headers
-        if(config('swagger-lume.cors_data.allowedOrigin') !== null){
-            $corsHeaders = ['Access-Control-Allow-Origin' => config('swagger-lume.cors_data.allowedOrigin')];
-
-            return new Response($content, 200, ['Content-Type' => 'application/json', $corsHeaders]);
+        if (config('swagger-lume.cors_data.allowedOrigin') !== null) {
+            return new Response($content, 200, [
+                'Content-Type' => 'application/json',
+                'Access-Control-Allow-Origin' => config('swagger-lume.cors_data.allowedOrigin')
+            ]);
         }
 
         return new Response($content, 200, ['Content-Type' => 'application/json']);
